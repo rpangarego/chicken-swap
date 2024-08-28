@@ -1,3 +1,7 @@
+# DEX Chicken Swap Token
+
+<img src="./images/chicken-swap-3.png" alt="chicken-swap-1" width=600>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

@@ -2,32 +2,220 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  /* color: #243056; */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.btn-connect {
+  background-color: #243056;
+  color: #fff;
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 100px;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.btn-connected {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  background-color: #243056;
+  color: #fff !important;
+  font-weight: 700;
+  padding: 7px 12px;
+  border-radius: 40px;
+  cursor: pointer;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.logo-text {
+  color: #243056;
+  font-weight: 700;
+}
+
+.trade-box {
+  width: 400px;
+  border: 2px solid #e8e8e8;
+  min-height: 300px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 25px;
+  padding-right: 25px;
+  box-shadow: 2px 2px 10px #ddd;
+}
+
+.trade-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 15px;
+  margin-bottom: 1.2rem;
+}
+
+.cog {
+  color: #243056;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+.cog:hover {
+  rotate: 90deg;
+  cursor: pointer;
+}
+
+.inputs {
+  position: relative;
+}
+
+input.inputAmount {
+  font-size: 45px;
+  margin-bottom: 6px;
+}
+
+.switchButton {
+  background-color: #fff;
+  border: 5px solid #ddd;
+  width: 35px;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 8px;
+  position: absolute;
+  top: 67px;
+  left: 155px;
+  color: #243056;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.assetOne {
+  position: absolute;
+  min-width: 50px;
+  height: 30px;
+  background-color: #3a4157;
+  color: #ddd;
+  top: 28px;
+  right: 15px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  font-size: 17px;
+  padding-right: 10px;
+}
+
+.assetTwo {
+  position: absolute;
+  min-width: 50px;
+  height: 30px;
+  background-color: #3a4157;
+  color: #ddd;
+  top: 112px;
+  right: 15px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  font-size: 17px;
+  padding-right: 10px;
+}
+
+.assetOne:hover {
+  cursor: pointer;
+}
+
+.assetTwo:hover {
+  cursor: pointer;
+}
+
+.assetLogo {
+  height: 22px;
+  margin-left: 8px;
+}
+
+.swapButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #243056;
+  width: calc(100%);
+  height: 55px;
+  font-size: 23px;
+  border-radius: 8px;
+  color: #ddd;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-bottom: 30px;
+  margin-top: 8px;
+}
+
+.swapButton[disabled] {
+  background-color: #243056;
+  opacity: 0.4;
+  color: #ddd;
+}
+
+.swapButton[disabled]:hover {
+  cursor: not-allowed;
+  background-color: #243056;
+}
+
+.swapButton:hover {
+  cursor: pointer;
+  background-color: #3b4874;
+}
+
+.tokenLogo {
+  height: 40px;
+  width: 40px;
+}
+
+.modalContent {
+  border-top: 1px solid #363e54;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tokenChoice {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.tokenChoice:hover {
+  cursor: pointer;
+  background-color: #e6e6e6;
+  border-radius: 8px;
+}
+
+.tokenName {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.tokenTicker {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #717582;
 }
